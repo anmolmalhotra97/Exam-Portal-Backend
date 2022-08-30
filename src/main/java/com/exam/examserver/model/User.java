@@ -1,7 +1,10 @@
-package com.exam.examserver.models;
+package com.exam.examserver.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -10,6 +13,9 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 @Data
+@ToString(exclude = "userRoles")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,19 +33,4 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     @JsonIgnore
     private Set<UserRole> userRoles = new HashSet<>();
-
-    public User() {
-    }
-
-    public User(Long id, String userName, String password, String firstName, String lastName, String email, String phone, boolean enabled, String profile) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-        this.enabled = enabled;
-        this.profile = profile;
-    }
 }

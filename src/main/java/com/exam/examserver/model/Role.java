@@ -1,6 +1,8 @@
-package com.exam.examserver.models;
+package com.exam.examserver.model;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
