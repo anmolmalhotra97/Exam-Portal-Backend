@@ -1,8 +1,11 @@
 package com.exam.examserver.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -19,6 +22,11 @@ public class User {
     private String phone;
     private boolean enabled = false;
     private String profile;
+
+    //We want the Roles for the users to be fetched with the User Information, Hence EAGER
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    @JsonIgnore
+    private Set<UserRole> userRoles = new HashSet<>();
 
     public User() {
     }
