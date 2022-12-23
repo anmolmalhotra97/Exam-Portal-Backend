@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Slf4j
 @Service
-public class UserServiceImplementation implements UserService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -23,7 +23,7 @@ public class UserServiceImplementation implements UserService {
 
     @Override
     public User createUser(User user, Set<UserRole> userRoles) throws Exception {
-        User currentUser = this.userRepository.findByUserName(user.getUserName());
+        User currentUser = this.userRepository.findByUserName(user.getUsername());
         if (currentUser != null) {
             log.error("User is already there !!");
             throw new Exception("User already present !! Cannot create User again.");
