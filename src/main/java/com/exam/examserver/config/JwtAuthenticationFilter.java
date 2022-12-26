@@ -52,7 +52,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             log.error("Invalid JWT Token: Token is either Null or doesn't start with 'Bearer'");
         }
 
-        //Validate the Token
+        //Validate the Token.
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             final UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
             if (this.jwtUtils.validateToken(jwtToken, userDetails)) {
