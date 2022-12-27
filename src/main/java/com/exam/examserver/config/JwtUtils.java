@@ -4,16 +4,16 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-@Component
+@Service
 public class JwtUtils {
-    private final String SECRET_KEY = "exam-portal";
+    private String SECRET_KEY = "exam-portal";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -48,8 +48,12 @@ public class JwtUtils {
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();
     }
 
-    public boolean validateToken(String token, UserDetails userDetails) {
+    public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+    }
+
+    public final String getSecret() {
+        return SECRET_KEY;
     }
 }

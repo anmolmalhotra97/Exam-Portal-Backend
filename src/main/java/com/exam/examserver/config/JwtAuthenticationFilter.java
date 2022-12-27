@@ -1,6 +1,7 @@
 package com.exam.examserver.config;
 
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -57,7 +58,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             final UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
             if (this.jwtUtils.validateToken(jwtToken, userDetails)) {
 
-                //Token is Valid, hence set authentication
+                //Token is Valid, hence set authentication in Security Context Holder.
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 

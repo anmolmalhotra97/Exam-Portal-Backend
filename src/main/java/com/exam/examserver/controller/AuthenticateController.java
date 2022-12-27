@@ -54,7 +54,7 @@ public class AuthenticateController {
         } catch (DisabledException disabledUserException) {
             throw new Exception("User: " + username + " " + disabledUserException.getMessage());
         } catch (BadCredentialsException badCredentialsException) {
-            throw new Exception("Invalid Credentials for username: " + username + badCredentialsException.getMessage());
+            throw new Exception("Invalid Credentials " + badCredentialsException.getMessage());
         }
     }
 
