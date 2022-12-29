@@ -25,9 +25,9 @@ public class Quiz {
 
     private String description;
 
-    private String maxMarks;
+    private Integer maxMarks;
 
-    private String numberOfQuestions;
+    private Integer numberOfQuestions;
 
     private boolean isActive = false;
 
