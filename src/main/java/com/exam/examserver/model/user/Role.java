@@ -1,4 +1,4 @@
-package com.exam.examserver.model;
+package com.exam.examserver.model.user;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.exam.examserver.implementation;
 
-import com.exam.examserver.model.User;
+import com.exam.examserver.model.user.User;
 import com.exam.examserver.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

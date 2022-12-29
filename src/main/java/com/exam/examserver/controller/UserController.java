@@ -1,8 +1,8 @@
 package com.exam.examserver.controller;
 
-import com.exam.examserver.model.Role;
-import com.exam.examserver.model.User;
-import com.exam.examserver.model.UserRole;
+import com.exam.examserver.model.user.Role;
+import com.exam.examserver.model.user.User;
+import com.exam.examserver.model.user.UserRole;
 import com.exam.examserver.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

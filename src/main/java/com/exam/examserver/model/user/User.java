@@ -1,5 +1,6 @@
-package com.exam.examserver.model;
+package com.exam.examserver.model.user;
 
+import com.exam.examserver.model.authentication.Authority;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;

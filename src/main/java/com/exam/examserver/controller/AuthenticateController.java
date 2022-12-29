@@ -1,9 +1,9 @@
 package com.exam.examserver.controller;
 
 import com.exam.examserver.config.JwtUtils;
-import com.exam.examserver.model.JwtRequest;
-import com.exam.examserver.model.JwtResponse;
-import com.exam.examserver.model.User;
+import com.exam.examserver.model.authentication.JwtRequest;
+import com.exam.examserver.model.authentication.JwtResponse;
+import com.exam.examserver.model.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
