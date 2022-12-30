@@ -29,9 +29,8 @@ public class Category {
     //LinkedHashSet is used to maintain the order of the questions
     //1 to many relationship with Quiz
     //CascadeType.ALL helps to save the category when we save the quiz
-    //FetchType.EAGER helps to fetch the quiz when we fetch the category
     //JsonIgnore helps to ignore the quiz when we fetch the category (to avoid infinite recursion)/(cyclic dependency)
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "category")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<Quiz> quizzes = new LinkedHashSet<>();
 }
