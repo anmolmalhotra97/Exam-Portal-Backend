@@ -32,10 +32,18 @@ public class QuestionController {
         return ResponseEntity.ok(this.questionService.getQuestion(questionId));
     }
 
-    //Get All Questions for a Quiz
+    //This API will return a filtered and shuffled list of Questions, with maxQuestions as the limit
+    //Get All Questions for a Quiz for NORMAL user
     @GetMapping("/quiz/{quizId}")
     public ResponseEntity<?> getQuestionsOfQuiz(@PathVariable Long quizId) {
         return ResponseEntity.ok(this.questionService.getQuestionsOfQuiz(quizId));
+    }
+
+    //This API will return an unFiltered and unShuffled list of ALL the Questions for ADMIN
+    //Get All Questions for a Quiz for ADMIN
+    @GetMapping("/quiz/admin/{quizId}")
+    public ResponseEntity<?> getQuestionsOfQuizAdmin(@PathVariable Long quizId) {
+        return ResponseEntity.ok(this.questionService.getQuestionsOfQuizAdmin(quizId));
     }
 
     //Delete Question
