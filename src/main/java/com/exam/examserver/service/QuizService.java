@@ -2,6 +2,7 @@ package com.exam.examserver.service;
 
 import com.exam.examserver.model.exam.Quiz;
 
+import java.util.List;
 import java.util.Set;
 
 public interface QuizService {
@@ -24,4 +25,9 @@ public interface QuizService {
     // Get Quizzes By Category
     public Set<Quiz> getQuizzesOfCategory(Long categoryId);
 
+    // Get active quizzes of category
+    public List<Quiz> getActiveQuizzesOfCategory(Long categoryId);
+
+    // Get active quizzes
+    public List<Quiz> getActiveQuizzes();
 }

@@ -49,4 +49,18 @@ public class QuizController {
     public ResponseEntity<?> getQuizzesOfCategory(@PathVariable Long categoryId) {
         return ResponseEntity.ok(this.quizService.getQuizzesOfCategory(categoryId));
     }
+
+    // Get ALL active quizzes
+    // Normal User API
+    @GetMapping("/active")
+    public ResponseEntity<?> getActiveQuizzes() {
+        return ResponseEntity.ok(this.quizService.getActiveQuizzes());
+    }
+
+    // Get active quizzes of category
+    // Normal User API
+    @GetMapping("/active/category/{categoryId}")
+    public ResponseEntity<?> getActiveQuizzesOfCategory(@PathVariable Long categoryId) {
+        return ResponseEntity.ok(this.quizService.getActiveQuizzesOfCategory(categoryId));
+    }
 }
