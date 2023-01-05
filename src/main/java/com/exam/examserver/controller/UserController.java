@@ -49,4 +49,10 @@ public class UserController {
     public void deleteUser(@PathVariable Long userId) throws Exception {
         this.userService.deleteUserByUserId(userId);
     }
+
+    //Test API
+    @GetMapping("/test")
+    public String test() {
+        return "Welcome to Spring Backend of ExamPortal";
+    }
 }
