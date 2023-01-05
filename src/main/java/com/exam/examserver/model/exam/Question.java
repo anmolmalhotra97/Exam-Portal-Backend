@@ -1,6 +1,7 @@
 package com.exam.examserver.model.exam;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,7 +32,6 @@ public class Question {
 
     private String option4;
 
-    @JsonIgnore
     private String answer;
 
     //Transient keyword is used to tell the compiler that this field is not to be persisted in the database

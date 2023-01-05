@@ -53,6 +53,11 @@ public class QuestionServiceImpl implements QuestionService {
             questionList = questionList.subList(0, quiz.getNumberOfQuestions() + 1);
         }
 
+        //Remove the answers from the questions
+        questionList.forEach(question -> {
+            question.setAnswer("");
+        });
+
         //To make things even more interesting, we will shuffle the questions again.
         Collections.shuffle(questionList);
         return questionList;
