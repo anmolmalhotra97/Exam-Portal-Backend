@@ -32,6 +32,10 @@ public class Question {
 
     private String answer;
 
+    //Transient keyword is used to tell the compiler that this field is not to be persisted in the database
+    @Transient
+    private String givenAnswer;
+
     //Many to 1 relationship with Quiz
     @ManyToOne(fetch = FetchType.EAGER)
     private Quiz quiz;

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/question")
 @CrossOrigin("*")
@@ -50,5 +52,11 @@ public class QuestionController {
     @DeleteMapping("/{questionId}")
     public void deleteQuestion(@PathVariable Long questionId) {
         this.questionService.deleteQuestion(questionId);
+    }
+
+    //Evaluate Quiz Question and return the result
+    @PostMapping("/evaluate")
+    public ResponseEntity<?> evaluateQuiz(@RequestBody List<Question> submittedQuestions) {
+        return ResponseEntity.ok(this.questionService.evaluateQuiz(submittedQuestions));
     }
 }

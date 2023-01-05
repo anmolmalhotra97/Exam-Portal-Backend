@@ -1,6 +1,7 @@
 package com.exam.examserver.service;
 
 import com.exam.examserver.model.exam.Question;
+import com.exam.examserver.model.exam.QuizResult;
 
 import java.util.List;
 import java.util.Set;
@@ -25,4 +26,6 @@ public interface QuestionService {
     void deleteQuestion(Long questionId);
 
     public Set<Question> getQuestionsOfQuizAdmin(Long quizId);
+
+    QuizResult evaluateQuiz(List<Question> submittedQuestions);
 }
