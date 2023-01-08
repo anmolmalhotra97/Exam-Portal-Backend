@@ -32,7 +32,7 @@
   <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/anmolmalhotra97/Exam-Portal-Backend" alt="contributors" />
   </a>
-  <a href="">
+  <a href="https://github.com/anmolmalhotra97/Exam-Portal-Backend/commits/master">
     <img src="https://img.shields.io/github/last-commit/anmolmalhotra97/Exam-Portal-Backend" alt="last update" />
   </a>
   <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
@@ -75,11 +75,65 @@ ___
 <!-- About the Project -->
 ### About the Project
 
+<!-- TechStack -->
+### Tech Stack
+
+## Backend:
+   
+[![Java][Java.com]][Java-url] | [![Spring Boot][SpringBoot.com]][SpringBoot-url] | [![Spring Security][SpringSecurity.com]][SpringSecurity-url]
+   
+## Frontend:
+
+[![Angular][Angular.io]][Angular-url] | [![Bootstrap][Bootstrap.com]][Bootstrap-url] | [![Material UI][MaterialUI.com]][MaterialUI-url]
+   
+## Database:   
+
+[![MySQL Database][MySQL.com]][MySQL-url]
+
+Cloud Deployment:
+
+[![Amazon AWS][AWS.com]][AWS-url]
+
+___
+
+<!-- Features -->
+### Features
+
+<table align="center">
+  <tr>
+    <th>User Type</th>
+   <th>Functionalities</th>
+  </tr>
+  <tr>
+    <td>
+  ADMIN
+ </td>
+  <td>
+   - Create/Update/Delete Quiz Categories.<br>
+   - Create/Update/Delete Quizzes.<br>
+   - Publish/Un-publish the Quizzes for the Students.<br>
+   - Add/Remove/Update Questions of the Quiz.<br>
+  </td>
+  </tr>
+  <tr>
+    <td>
+  NORMAL USER
+ </td>
+  <td>
+   - Browse throuh Quiz Categories.<br>
+   - View Available Quizzes.<br>
+   - View Instructions and Attempt Quizzes.<br>
+   - Attempt and Submit/Autosubmit the Quiz.<br>
+   - View and Print the Results of the Quiz.<br>
+  </td>
+  </tr>
+</table>
+
+___
 
 <!-- Screenshots -->
 ### Screenshots
 
-- <details>
   <summary><h2><strong>[STUDENT PANEL]<strong> Screen-Shots</h2></summary> 
    <ul>
     <li>
@@ -119,9 +173,9 @@ ___
      </div>
     </li>
    </ul>
- </details>
-   
-- <details>
+
+   ___
+
   <summary><h2><strong>[ADMIN PANEL]<strong> Screen-Shots</h2></summary> 
    <ul>
     <li>
@@ -155,60 +209,8 @@ ___
      </div>
     </li>
    </ul>
- </details>
 
-
-<!-- TechStack -->
-### Tech Stack
-
-## Backend:
-   
-[![Java][Java.com]][Java-url] | [![Spring Boot][SpringBoot.com]][SpringBoot-url] | [![Spring Security][SpringSecurity.com]][SpringSecurity-url]
-   
-## Frontend:
-
-[![Angular][Angular.io]][Angular-url] | [![Bootstrap][Bootstrap.com]][Bootstrap-url] | [![Material UI][MaterialUI.com]][MaterialUI-url]
-   
-## Database:   
-
-[![MySQL Database][MySQL.com]][MySQL-url]
-
-Cloud Deployment:
-
-[![Amazon AWS][AWS.com]][AWS-url]
-
-<!-- Features -->
-### Features
-
-<table align="center">
-  <tr>
-    <th>User Type</th>
-   <th>Functionalities</th>
-  </tr>
-  <tr>
-    <td>
-  ADMIN
- </td>
-  <td>
-   - Create/Update/Delete Quiz Categories.<br>
-   - Create/Update/Delete Quizzes.<br>
-   - Publish/Un-publish the Quizzes for the Students.<br>
-   - Add/Remove/Update Questions of the Quiz.<br>
-  </td>
-  </tr>
-  <tr>
-    <td>
-  NORMAL USER
- </td>
-  <td>
-   - Browse throuh Quiz Categories.<br>
-   - View Available Quizzes.<br>
-   - View Instructions and Attempt Quizzes.<br>
-   - Attempt and Submit/Autosubmit the Quiz.<br>
-   - View and Print the Results of the Quiz.<br>
-  </td>
-  </tr>
-</table>
+___
 
 <!-- Run Locally -->
 ### Run Locally
@@ -220,7 +222,6 @@ Install dependencies
 ```bash
   maven clean build
 ```
-   Contributing
 ## Angular Frontend
 
 ```bash
@@ -239,7 +240,6 @@ Start the server
    ng serve
 ```   
 
-   
 <!-- Roadmap -->
 ## Roadmap
 
