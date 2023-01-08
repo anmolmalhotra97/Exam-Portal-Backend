@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/26005821/210939086-ff7424c3-7d9b-407d-a5e8-a604e4d5e34a.png" alt="logo" width="200" height="auto" />
-  <h1>Exam Portal Java-Spring Backend!</h1>
+  <h1>Pariksha [Exam Portal] Java-Spring Backend!</h1>
 
  <table>
 <tr>
